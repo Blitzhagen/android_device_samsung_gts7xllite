@@ -12,6 +12,7 @@ DEVICE_PATH := device/samsung/gts7xllite
 # (Phase 2: TARGET_PREBUILT_KERNEL/BOARD_PREBUILT_DTBIMAGE_DIR/BOARD_PREBUILT_DTBOIMAGE
 #  entfernen -> Source-Build aus kernel/samsung/sm7225)
 TARGET_PREBUILT_KERNEL      := $(DEVICE_PATH)/prebuilt/kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
 BOARD_PREBUILT_DTBOIMAGE    := $(DEVICE_PATH)/prebuilt/dtbo.img
 
