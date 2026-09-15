@@ -1,0 +1,1 @@
+# Geraetespezifische Blobs (aktuell alles ueber sm7225-common abgedeckt)

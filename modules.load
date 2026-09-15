@@ -1,0 +1,6 @@
+llcc_perfmon.ko
+mpq-adapter.ko
+mpq-dmx-hw-plugin.ko
+rmnet_shs.ko
+rmnet_perf.ko
+rdbg.ko
