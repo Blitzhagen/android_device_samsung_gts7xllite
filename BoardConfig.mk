@@ -8,13 +8,12 @@ include device/samsung/sm7225-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/gts7xllite
 
-# Kernel: Phase 1 = Prebuilt aus Stock-Firmware T736BXXS9DYF1
-# (Phase 2: TARGET_PREBUILT_KERNEL/BOARD_PREBUILT_DTBIMAGE_DIR/BOARD_PREBUILT_DTBOIMAGE
-#  entfernen -> Source-Build aus kernel/samsung/sm7225)
-TARGET_PREBUILT_KERNEL      := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_FORCE_PREBUILT_KERNEL := true
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
-BOARD_PREBUILT_DTBOIMAGE    := $(DEVICE_PATH)/prebuilt/dtbo.img
+# Kernel: Phase 2 = Source-Build aus Original-Quellcode (kernel/samsung/sm7225)
+# Rollback: TARGET_PREBUILT_KERNEL/TARGET_FORCE_PREBUILT_KERNEL/
+#           BOARD_PREBUILT_DTBIMAGE_DIR/BOARD_PREBUILT_DTBOIMAGE auf
+#           $(DEVICE_PATH)/prebuilt/* setzen
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_DTBO_CFG              := $(DEVICE_PATH)/dtboimg.cfg
 
 # Kernel modules (Liste aus Stock vendor/lib/modules/modules.load)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
