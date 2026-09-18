@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- gts7xllite hat kein Blitzlicht: flashlight-Tile aus allen Listen entfernt -->
+    <string name="quick_settings_tiles_default" translatable="false">
+        internet,bt,dnd,alarm,airplane,controls,wallet,rotation,battery,cast,screenrecord,mictoggle,cameratoggle,custom(com.android.permissioncontroller/.permission.service.v33.SafetyCenterQsTileService)
+    </string>
+
+    <string name="quick_settings_tiles_stock" translatable="false">
+        internet,wifi,cell,bt,dnd,alarm,airplane,nfc,controls,wallet,rotation,battery,cast,screenrecord,mictoggle,cameratoggle,location,hotspot,inversion,saver,dark,work,night,reverse,reduce_brightness,qr_code_scanner,onehanded,color_correction,dream,font_scaling,record_issue,ambient_display,aod,caffeine,heads_up,reading_mode,sync,powershare,profiles,usb_tether,vpn
+    </string>
+
+    <string name="quick_settings_tiles_retail_mode" translatable="false">
+        night,dark,dnd,rotation,location
+    </string>
+</resources>

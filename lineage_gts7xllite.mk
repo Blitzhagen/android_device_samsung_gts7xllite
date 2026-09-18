@@ -8,6 +8,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Geraet hat Mobilfunk: Dialer, ImsServiceEntitlement und die
+# Telefonie-Preload-Config kommen aus dem Telephony-Produktpaket.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
+
 # Inherit from gts7xllite device
 $(call inherit-product, device/samsung/gts7xllite/device.mk)
 
