@@ -14,6 +14,9 @@ $(call inherit-product, device/samsung/gts7xllite/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
+# APEXes unkomprimiert (capex braucht /data/apex/decompressed beim ersten Boot)
+PRODUCT_COMPRESSED_APEX := false
+
 PRODUCT_NAME := lineage_gts7xllite
 PRODUCT_DEVICE := gts7xllite
 PRODUCT_MANUFACTURER := samsung
@@ -27,3 +30,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint="samsung/gts7xllitexeea/gts7xllite:14/UP1A.231005.007/T736BXXS9DYF1:user/release-keys" \
     BuildDesc="gts7xllitexeea-user 14 UP1A.231005.007 T736BXXS9DYF1 release-keys"
+

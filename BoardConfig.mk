@@ -45,3 +45,4 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
+

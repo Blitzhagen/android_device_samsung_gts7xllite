@@ -37,12 +37,24 @@ WITH_GMS_COMMS_SUITE := false
 PRODUCT_PACKAGES += \
     init.gts7xllite.rc
 
+# ADB-Auth in Recovery: Host-Key vorab autorisieren
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/adb_keys:$(TARGET_RECOVERY_ROOT_OUT)/adb_keys
+
+# Bring-up: adbd ohne Auth und standardmaessig aktiv (spaeter wieder sichern)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=adb
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    WifiResDevice
+    WifiResDevice \
+    gts7xllite_no_nfc \
+    gts7xllite_audio_policy_volumes
 
 # Sensors
 PRODUCT_COPY_FILES += \

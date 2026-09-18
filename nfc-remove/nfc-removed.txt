@@ -1,0 +1,3 @@
+SM-T736B has no NFC hardware. Stock firmware has no NFC stack, so the
+AOSP NFC apps (NfcNci, Tag, com.android.nfc_extras) are overridden by this
+module to keep them out of the image. See device/samsung/gts7xllite/Android.bp.
