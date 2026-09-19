@@ -3,9 +3,6 @@
 # VNDK (vendor partition was built against API 30 / Android 11)
 ro.vndk.version=30
 
-# adb ohne Pubkey-Auth (adb_keys liegt auf verschluesseltem /data)
-ro.adb.secure=0
-
 # Bluetooth-Name
 bluetooth.device.default_name=Galaxy Tab S7 FE 5G
 

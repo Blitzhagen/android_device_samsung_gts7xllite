@@ -41,12 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/adb_keys:$(TARGET_RECOVERY_ROOT_OUT)/adb_keys
 
-# Bring-up: adbd ohne Auth und standardmaessig aktiv (spaeter wieder sichern)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=adb
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay

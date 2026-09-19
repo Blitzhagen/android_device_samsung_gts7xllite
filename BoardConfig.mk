@@ -45,3 +45,8 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
 
+
+# Private AVB-Signierung (ueberschreibt die Testkeys aus BoardConfigCommon)
+BOARD_AVB_KEY_PATH := vendor/lineage-priv/keys/avb.pem
+BOARD_AVB_RECOVERY_KEY_PATH := vendor/lineage-priv/keys/avb_recovery.pem
+BOARD_AVB_SYSTEM_KEY_PATH := vendor/lineage-priv/keys/avb_system.pem
