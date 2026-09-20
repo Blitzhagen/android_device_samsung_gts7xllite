@@ -47,8 +47,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     WifiResDevice \
-    gts7xllite_no_nfc \
-    gts7xllite_audio_policy_volumes
+    gts7xllite_no_nfc
 
 # Sensors
 PRODUCT_COPY_FILES += \
