@@ -22,4 +22,9 @@
 <resources>
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">75</integer>
+
+    <!-- EmergencyInfo is system_ext_specific; we have no system_ext partition,
+         so its com.android.emergency.gesture provider is absent and the
+         controller would crash on query. Hide the entry instead. -->
+    <bool name="config_show_emergency_gesture_settings">false</bool>
 </resources>
