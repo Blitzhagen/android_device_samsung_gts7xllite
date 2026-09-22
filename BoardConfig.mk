@@ -8,10 +8,10 @@ include device/samsung/sm7225-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/gts7xllite
 
-# Kernel: Phase 2 = source build from original source (kernel/samsung/sm7225)
-# Rollback: point TARGET_PREBUILT_KERNEL/TARGET_FORCE_PREBUILT_KERNEL/
-#           BOARD_PREBUILT_DTBIMAGE_DIR/BOARD_PREBUILT_DTBOIMAGE at
-#           $(DEVICE_PATH)/prebuilt/*
+# Kernel: built from source (kernel/samsung/sm7225).
+# Rollback to stock binaries would need TARGET_PREBUILT_KERNEL/
+# TARGET_FORCE_PREBUILT_KERNEL + BOARD_PREBUILT_DTBIMAGE_DIR/
+# BOARD_PREBUILT_DTBOIMAGE and the files re-added under $(DEVICE_PATH)/prebuilt/.
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_DTBO_CFG              := $(DEVICE_PATH)/dtboimg.cfg
 
