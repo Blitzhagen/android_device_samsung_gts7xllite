@@ -57,7 +57,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# gts7xllite hat keinen Fingerabdrucksensor (kein UDFPS)
+# gts7xllite has no fingerprint sensor (no UDFPS)
 
 # Inherit from vendor blobs
 $(call inherit-product-if-exists, vendor/samsung/gts7xllite/gts7xllite-vendor.mk)

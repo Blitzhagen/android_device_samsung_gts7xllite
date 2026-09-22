@@ -1,4 +1,4 @@
-# Abgeleitet aus Stock vendor/build.prop (SM-T736B, T736BXXS9DYF1) -- device-first
+# Derived from stock vendor/build.prop (SM-T736B, T736BXXS9DYF1) -- device-first
 
 # VNDK (vendor partition was built against API 30 / Android 11)
 ro.vndk.version=30
