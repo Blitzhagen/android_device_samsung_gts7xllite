@@ -203,9 +203,8 @@ ro.camera.disableJpegR=true
 camera.disable_zsl_mode=1
 ro.netflix.bsp_rev=Q7250-19133-1
 vendor.mm.enable.qcom_parser=16777215
-debug.stagefright.omx_default_rank=0
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-debug.stagefright.ccodec=1
+debug.stagefright.c2inputsurface=-1
 ro.build.scafe.version=2021A
 
 # Samsung Memory (slmk/dha/pageboost)
