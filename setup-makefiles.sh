@@ -9,5 +9,6 @@ set -e
 export DEVICE=gts7xllite
 export DEVICE_COMMON=sm7225-common
 export VENDOR=samsung
+export VENDOR_COMMON=${VENDOR}
 
-"./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
+"./../../${VENDOR_COMMON}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
