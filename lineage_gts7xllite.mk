@@ -15,6 +15,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 # Inherit from gts7xllite device
 $(call inherit-product, device/samsung/gts7xllite/device.mk)
 
+# DEBUG-BRINGUP: adb ohne Auth (ro.adb.secure=0, ro.debuggable=1) - vor produktivem Einsatz entfernen!
+WITH_ADB_INSECURE := true
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 

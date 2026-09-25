@@ -1,7 +1,8 @@
 # Derived from stock vendor/build.prop (SM-T736B, T736BXXS9DYF1) -- device-first
 
-# VNDK (vendor partition was built against API 30 / Android 11)
-ro.vndk.version=30
+# VNDK: ro.vndk.version bewusst NICHT gesetzt — A16-linkerconfig crasht sonst
+# ("SANITIZER_DEFAULT_VENDOR is not defined"), weil com.android.vndk.v30 aus
+# AOSP entfernt wurde. Undefiniert -> LLNDK-Liste aus /system/etc/llndk.libraries.txt.
 
 # Bluetooth-Name
 bluetooth.device.default_name=Galaxy Tab S7 FE 5G
