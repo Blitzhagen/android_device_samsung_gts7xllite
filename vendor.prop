@@ -96,7 +96,7 @@ persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.apptype.multirec.enabled=false
 ro.vendor.audio.sdk.fluencetype=none
-persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicecall=false
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.tmic.enabled=false
@@ -173,6 +173,13 @@ persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.qcom.bluetooth.scram.enabled=false
+
+# Cherokee FW advertises HCI Enhanced_Setup_Synchronous_Connection
+# (supported commands octet 29 bit 3 -> index 293) but rejects every
+# host-initiated eSCO setup, so calls on BT headsets stayed silent
+# until the headset opened SCO itself. Mask the command to force the
+# legacy Setup_Synchronous_Connection path.
+bluetooth.hci.disabled_commands=293
 
 # Perf / QTI / System
 dalvik.vm.heapgrowthlimit=512m
