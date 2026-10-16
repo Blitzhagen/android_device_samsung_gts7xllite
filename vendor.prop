@@ -266,5 +266,5 @@ ro.config.notification_sound_2=Signal.ogg
 ro.config.vc_call_vol_steps=8
 
 
-# Updater (OTA via GitHub Releases — index file in ota/{device}.json)
-lineage.updater.uri=https://raw.githubusercontent.com/Blitzhagen/android_device_samsung_gts7xllite/lineage-21.0/ota/{device}.json
+# Updater (OTA via GitHub Releases — index repo: Blitzhagen/ota)
+lineage.updater.uri=https://raw.githubusercontent.com/Blitzhagen/ota/main/{device}.json
