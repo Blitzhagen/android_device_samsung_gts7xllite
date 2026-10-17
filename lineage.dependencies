@@ -3,12 +3,12 @@
     "repository": "Blitzhagen/android_device_samsung_sm7225-common",
     "target_path": "device/samsung/sm7225-common",
     "remote": "github",
-    "branch": "lineage-22.0"
+    "branch": "lineage-22.2"
   },
   {
     "repository": "Blitzhagen/android_vendor_samsung_gts7xllite",
     "target_path": "vendor/samsung/gts7xllite",
     "remote": "github",
-    "branch": "lineage-22.0"
+    "branch": "lineage-22.2"
   }
 ]
