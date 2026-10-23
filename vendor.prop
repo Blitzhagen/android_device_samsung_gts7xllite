@@ -1,7 +1,12 @@
 # Derived from stock vendor/build.prop (SM-T736B, T736BXXS9DYF1) -- device-first
 
-# VNDK (vendor partition was built against API 30 / Android 11)
-ro.vndk.version=30
+# VNDK: ro.vndk.version intentionally NOT set. prebuilts/vndk no longer
+# ships a v30 snapshot, so declaring 30 makes linkerconfig reference
+# VNDK_SAMEPROCESS_LIBRARIES_* which only exists inside
+# /apex/com.android.vndk.v30 -> undefined var -> linkerconfig aborts and no
+# ld.config.txt is generated (keystore2/qseecomd then die on libandroidicu).
+# Unset = vendor treated as "current"; v30-only libs come from source-built
+# .vendor modules / compat shims instead.
 
 # Bluetooth-Name
 bluetooth.device.default_name=Galaxy Tab S7 FE 5G
