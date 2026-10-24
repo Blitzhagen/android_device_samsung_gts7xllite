@@ -15,9 +15,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 # Inherit from gts7xllite device
 $(call inherit-product, device/samsung/gts7xllite/device.mk)
 
-# Bringup: adb ohne Auth (boot debug), muss vor common.mk stehen
-WITH_ADB_INSECURE := true
-
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
