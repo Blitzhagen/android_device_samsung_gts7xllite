@@ -41,10 +41,6 @@ WITH_GMS_COMMS_SUITE := false
 PRODUCT_PACKAGES += \
     init.gts7xllite.rc
 
-# ADB-Auth in Recovery: Host-Key vorab autorisieren
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/adb_keys:$(TARGET_RECOVERY_ROOT_OUT)/adb_keys
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
