@@ -16,6 +16,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 $(call inherit-product, device/samsung/gts7xllite/device.mk)
 
 # Inherit some common Lineage stuff.
+# Bringup: adb ohne Auth (boot debug), muss vor common.mk stehen
+WITH_ADB_INSECURE := true
+
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
 # APEXes unkomprimiert (capex braucht /data/apex/decompressed beim ersten Boot)
