@@ -21,11 +21,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/NokiaTechno.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/NokiaTechno.ogg
 
-# System props — vendor.prop can't carry these namespaces (init drops
-# non-vendor/* props from /vendor/build.prop). Overrides Orion.ogg from
-# lineage telephony.mk since system props load before product props.
+# System props — vendor.prop can't carry the lineage.* namespace (init
+# drops non-vendor/* props from /vendor/build.prop).
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.config.ringtone=NokiaTechno.ogg \
     lineage.updater.uri=https://raw.githubusercontent.com/Blitzhagen/ota/main/{device}.json
 
 # Boot animation
