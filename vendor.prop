@@ -274,7 +274,7 @@ ro.config.pageboost.vramdisk.without_predict=true
 # Sonstiges
 wifi.aware.interface=wifi-aware0
 vendor.wv.oemcrypto.debug.enable_external_display_check=1
-ro.config.ringtone=Galaxy_Bells.ogg
+ro.config.ringtone=NokiaTechno.ogg
 ro.config.notification_sound=Spaceline.ogg
 ro.config.alarm_alert=Homecoming.ogg
 ro.config.media_sound=Media_preview_Touch_the_light.ogg
