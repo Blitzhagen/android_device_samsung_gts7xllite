@@ -35,3 +35,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint="samsung/gts7xllitexeea/gts7xllite:14/UP1A.231005.007/T736BXXS9DYF1:user/release-keys" \
     BuildDesc="gts7xllitexeea-user 14 UP1A.231005.007 T736BXXS9DYF1 release-keys"
 
+# Default ringtone. /product/etc/build.prop is the last prop file init
+# loads and wins even ro.* — so this must live in the product prop list,
+# appended after telephony.mk's ro.config.ringtone=Orion.ogg. The dup is
+# intentional: init's prop map is last-write-wins, so our later entry
+# takes effect. Requires BUILD_BROKEN_DUP_SYSPROP (see BoardConfig).
+PRODUCT_PRODUCT_PROPERTIES += ro.config.ringtone=NokiaTechno.ogg
+
