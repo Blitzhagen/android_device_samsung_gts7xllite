@@ -177,12 +177,17 @@ vendor.audio.feature.incall_music.enable=true
 vendor.audio.feature.audiozoom.enable=false
 
 # Bluetooth
-ro.bluetooth.a2dp_offload.supported=true
-persist.bluetooth.a2dp_offload.disabled=false
+# A2DP hardware offload must stay disabled: the only A2DP output module in
+# the audio policy is "bluetooth" (audio.bluetooth.default.so), which can
+# only serve A2DP_SOFTWARE_ENCODING_DATAPATH sessions. When the stack
+# negotiated A2DP_HARDWARE_OFFLOAD_ENCODING_DATAPATH every output open
+# failed ("session not ready"), leaving streams silently on the speaker.
+ro.bluetooth.a2dp_offload.supported=false
+persist.bluetooth.a2dp_offload.disabled=true
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.soc=cherokee
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.enable.splita2dp=false
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 ro.vendor.bluetooth.wipower=false
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
