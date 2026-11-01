@@ -3,19 +3,17 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from sm7225-commmon
+# Inherit from sm7225-common
 include device/samsung/sm7225-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/gts7xllite
 
-# Intentional ro.config.ringtone dup in product prop list (Orion.ogg from
-# telephony.mk vs our NokiaTechno.ogg — the later entry wins at runtime).
+# ro.config.ringtone appears twice in product props on purpose
+# (telephony.mk's Orion.ogg vs our NokiaTechno.ogg; last entry wins)
 BUILD_BROKEN_DUP_SYSPROP := true
 
-# Kernel: built from source (kernel/samsung/sm7225).
-# Rollback to stock binaries would need TARGET_PREBUILT_KERNEL/
-# TARGET_FORCE_PREBUILT_KERNEL + BOARD_PREBUILT_DTBIMAGE_DIR/
-# BOARD_PREBUILT_DTBOIMAGE and the files re-added under $(DEVICE_PATH)/prebuilt/.
+# Kernel is built from source. Rolling back to stock binaries would need
+# TARGET_PREBUILT_KERNEL plus the prebuilt DTBIMAGE/DTBOIMAGE paths.
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_DTBO_CFG              := $(DEVICE_PATH)/dtboimg.cfg
 
@@ -48,7 +46,6 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
-
 
 # Private AVB signing (local only; falls back to test keys otherwise)
 ifneq ($(wildcard vendor/lineage-priv/keys/avb.pem),)

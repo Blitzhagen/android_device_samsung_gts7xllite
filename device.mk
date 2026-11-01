@@ -30,22 +30,12 @@ PRODUCT_SYSTEM_PROPERTIES += \
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 2560
 
-# TODO: Check if we actually need this
-# PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#     ro.bootanim.set_orientation_4630947232161729153=ORIENTATION_90
-
 # GMS
 WITH_GMS_COMMS_SUITE := false
-
-# TODO: Check if we actually need this
-# Display
-# PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#    ro.surface_flinger.primary_display_orientation=ORIENTATION_270
 
 # Init files
 PRODUCT_PACKAGES += \
     init.gts7xllite.rc
-
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -63,7 +53,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# gts7xllite has no fingerprint sensor (no UDFPS)
+# No fingerprint sensor, so no UDFPS
 
 # Inherit from vendor blobs
 $(call inherit-product-if-exists, vendor/samsung/gts7xllite/gts7xllite-vendor.mk)

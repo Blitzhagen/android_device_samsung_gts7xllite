@@ -18,7 +18,7 @@ $(call inherit-product, device/samsung/gts7xllite/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
-# APEXes unkomprimiert (capex braucht /data/apex/decompressed beim ersten Boot)
+# Uncompressed APEXes (capex needs /data/apex/decompressed on first boot)
 PRODUCT_COMPRESSED_APEX := false
 
 PRODUCT_NAME := lineage_gts7xllite
@@ -35,10 +35,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint="samsung/gts7xllitexeea/gts7xllite:14/UP1A.231005.007/T736BXXS9DYF1:user/release-keys" \
     BuildDesc="gts7xllitexeea-user 14 UP1A.231005.007 T736BXXS9DYF1 release-keys"
 
-# Default ringtone. /product/etc/build.prop is the last prop file init
-# loads and wins even ro.* — so this must live in the product prop list,
-# appended after telephony.mk's ro.config.ringtone=Orion.ogg. The dup is
-# intentional: init's prop map is last-write-wins, so our later entry
-# takes effect. Requires BUILD_BROKEN_DUP_SYSPROP (see BoardConfig).
+# Default ringtone: init's prop map is last-write-wins and /product is
+# loaded last, so this entry overrides telephony.mk's Orion.ogg
+# (requires BUILD_BROKEN_DUP_SYSPROP, see BoardConfig).
 PRODUCT_PRODUCT_PROPERTIES += ro.config.ringtone=NokiaTechno.ogg
 
