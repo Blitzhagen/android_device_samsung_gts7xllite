@@ -35,8 +35,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint="samsung/gts7xllitexeea/gts7xllite:14/UP1A.231005.007/T736BXXS9DYF1:user/release-keys" \
     BuildDesc="gts7xllitexeea-user 14 UP1A.231005.007 T736BXXS9DYF1 release-keys"
 
-# Default ringtone: init's prop map is last-write-wins and /product is
-# loaded last, so this entry overrides telephony.mk's Orion.ogg
-# (requires BUILD_BROKEN_DUP_SYSPROP, see BoardConfig).
-PRODUCT_PRODUCT_PROPERTIES += ro.config.ringtone=NokiaTechno.ogg
-

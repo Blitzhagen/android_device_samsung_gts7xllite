@@ -8,10 +8,6 @@ include device/samsung/sm7225-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/gts7xllite
 
-# ro.config.ringtone appears twice in product props on purpose
-# (telephony.mk's Orion.ogg vs our NokiaTechno.ogg; last entry wins)
-BUILD_BROKEN_DUP_SYSPROP := true
-
 # Kernel is built from source. Rolling back to stock binaries would need
 # TARGET_PREBUILT_KERNEL plus the prebuilt DTBIMAGE/DTBOIMAGE paths.
 BOARD_KERNEL_SEPARATED_DTBO := true

@@ -17,10 +17,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
-# Ringtones
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/NokiaTechno.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/NokiaTechno.ogg
-
 # System props — vendor.prop can't carry the lineage.* namespace (init
 # drops non-vendor/* props from /vendor/build.prop).
 PRODUCT_SYSTEM_PROPERTIES += \
